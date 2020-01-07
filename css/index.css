@@ -1,0 +1,347 @@
+*{
+box-sizing:border-box;
+}
+img{
+width:100%;
+height: 100%;
+}
+body{
+height: 1000px;
+background-color:#62acb2;
+padding: 20px;
+}
+.header{
+width:80%;
+height: 15%;
+margin:auto;
+}
+.logo{
+margin-top:6px;
+height: 160px;
+width: 160px;
+float: left;
+border-radius:10px;
+box-shadow: 2px 2px 10px black;
+margin-right: 5px;
+}
+.title{
+width: 50%;
+height: 50%;
+background-color:#62acb2;
+padding-left: 15px;
+padding-top: .3em;
+font-size: 4em;
+font-family:"monotype corsiva";
+float: left;
+font-stretch: condensed;
+color: rgb(21,41,40);
+margin-left: 50px;
+}
+.subtitle{
+font-size: 1.3em;
+font-family: "felix titling";
+color: rgb(21,41,40);
+height: 30%;
+width: 50%;
+float: left;
+padding: 15px;
+margin-left: 60px;
+margin-top: 1%;
+}
+.branch{
+  width: 25%;
+  height:20%;
+  right: 9%;
+  top: 2%;
+  position: absolute;
+}
+/* -----------  navigation links ----------------*/
+.tabs{
+width: 90%;
+height: 5%;
+font-family: "felix titling";
+margin: auto;
+margin-top: 3%;
+}
+a:not(.active){
+  color: black;
+  text-decoration: none;
+}
+/* dropdown list is "about" */
+.about {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  font-size: 0.8em;
+  display: none;
+  position: absolute;
+  background-color:#62acb2;
+  color: white;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color:rgb(28,53,55); color:white;}
+
+.about:hover .dropdown-content {
+  display: block;
+}
+
+.about:hover .dropdown {
+  background-color: rgb(28,53,55);
+  color: white;
+}
+/*end of dropdown list --*/
+.home, .about, .photogallery, .tipstricks, .newsevents, .contact{
+width: 16.6%;
+height: 100%;
+border: #62acb2 2px;
+float:left;
+font-size: 20px;
+text-align: center;
+padding-top:0.3em;
+text-decoration: none;
+}
+.home:hover, .about:hover, .photogallery:hover, .tipstricks:hover, .newsevents:hover, .contact:hover{
+color: white;
+}
+/* -------- end of navigation links ---------------- */
+.content{
+width:90%;
+height: 55%;
+margin: auto;
+}
+.texto{
+width: 40%;
+height: 90%;
+color: black;
+float: right;
+padding: 60px;
+font-family:"euphemia";
+text-align: justify;
+font-size: 1.2em;
+overflow: hidden;
+margin-right: 10%;
+text-indent: 1.2em;
+}
+ .slider{
+width: 550px;
+height: 90%;
+float: left;
+margin: auto;
+overflow: hidden;
+margin-left: 5%;
+}
+ .slider ul{
+display:flex;
+padding: 0;
+width: 700%;
+height: 98%;
+animation: slyde 30s infinite alternate step-start;
+}
+ .slider li{
+width:100%;
+list-style:none;
+}
+ .slider img{
+width:100%;
+}
+ @keyframes slyde{
+
+  0% {margin-left: 0%;}
+ 13% {margin-left: 0%;}
+
+ 14% {margin-left: -100%;}
+ 27% {margin-left: -100%;}
+
+ 28% {margin-left: -200%;}
+ 41% {margin-left: -200%;}
+
+ 42% {margin-left: -300%;}
+ 55% {margin-left: -300%;}
+
+ 56% {margin-left: -400%;}
+ 70% {margin-left: -400%;}
+
+ 71% {margin-left: -500%;}
+ 85% {margin-left: -500%;}
+
+ 86% {margin-left: -600%;}
+ 100% {margin-left: -600%;}
+}
+
+.footer{
+  padding: 60px;
+  font-family:"euphemia";
+  width:90%;
+  height: 5%;
+  text-align: center;
+  margin: auto;
+}
+/*------------------------------------------*/
+/*----------- LARGE-MEDIUM SCREEN ----------*/
+@media only screen and (max-width: 1500px) {
+  div.logo{
+  height: 150px;
+  width: 150px;
+  }
+  .title{
+  padding-left: 12px;
+  padding-top: .2em;
+  font-size: 3em;
+  }
+  .subtitle{
+  font-size: 1em;
+  padding: 12px;
+  }
+  .branch{
+    width: 25%;
+    height:20%;
+    right: 9%;
+    top: 2%;
+    position: absolute;
+  }
+  .dropdown-content {
+    font-size: 0.9em;
+  }
+  .tabs{
+    margin-top: 50px;
+  }
+  .home, .about, .photogallery, .tipstricks, .newsevents, .contact{
+  font-size: 15px;
+  }
+  .texto{
+  width: 450px;
+  height: 90%;
+  font-size: 1.1em;
+  }
+   .slider{
+  width: 400px;
+  height: 75%;
+  margin-top: 50px;
+  }
+} /*-- end of LARGE-MEDIUM screen ---*/
+/*------------------------------------------*/
+/*----------- MEDIUM SCREEN ----------*/
+@media only screen and (max-width: 1200px) {
+  div.logo{
+  height: 120px;
+  width: 120px;
+  margin: 0px;
+  }
+  .title{
+  width: 60%;
+  font-size: 2em;
+  }
+  .subtitle{
+  font-size: 0.85em;
+  padding: 0px;
+  }
+  .branch{
+    display: none;
+  }
+  .dropdown-content {
+    font-size: 0.9em;
+  }
+  .tabs{
+    margin-top: 20px;
+  }
+  .home, .about, .photogallery, .tipstricks, .newsevents, .contact{
+  font-size: 12px;
+  border-left: ridge white;
+  padding: 5px;
+  }
+  .content{
+    height: 800px;
+    margin-top: 20px;
+  }
+    .slider{
+   width: 500px;
+   height:55%;
+   margin:0px;
+   }
+    .texto{
+    width: 90%;
+    height: 45%;
+    padding: 10px;
+    font-size: 1.1em;
+    }
+
+  } /*-- end of MEDIUM screen ---*/
+  /*----------- APP VIEW SCREEN ----------*/
+  @media only screen and (max-width: 650px) {
+    body{
+      padding: 5px;
+      height: 800px;
+    }
+    div.logo{
+    height: 90px;
+    width: 90px;
+    }
+    .title{
+    width: 65%;
+    height: auto;
+    font-size: 1.5em;
+    margin-left: 20px;
+    background-color: none;
+    }
+    .header{
+      width: 100%;
+    }
+    .subtitle{
+    width: 63%;
+    font-size: 0.7em;
+    padding: 0px;
+    margin: 15px 0px 0px 25px;
+    }
+
+    .header{
+      height: 100px;
+    }
+    .dropdown-content {
+      font-size: 0.9em;
+      min-width: 120px;
+    }
+    .tabs{
+      margin-top: 20px;
+      width: 100%;
+      height:30px;
+    }
+    .home, .about, .photogallery, .tipstricks, .newsevents, .contact{
+    font-size: 10px;
+    padding: 5px;
+    height: 26px;
+    }
+    .content{
+      width: 350px;
+      height:650px;
+      margin-top: 10px;
+    }
+      .slider{
+     width: 100%;
+     height:350px;
+     margin:0px;
+     }
+      .texto{
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      font-size: 0.85em;
+      margin: 0px;
+      overflow: hidden;
+      }
+      .footer{
+        padding: 30px;
+        width:100%;
+        font-size: 0.6em;
+      }
+    } /*-- end of App View screen ---*/

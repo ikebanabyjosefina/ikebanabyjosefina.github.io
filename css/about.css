@@ -1,0 +1,287 @@
+*{
+box-sizing:border-box;
+}
+img{
+width:100%;
+height: 100%;
+}
+body, .tabs{
+background-color:#62acb2;
+}
+body{
+  padding: 20px;
+}
+.tabs{
+width: 100%;
+height: 50px;
+margin: auto;
+position:sticky;
+font-family: "felix titling";
+top:50px;
+
+}
+a:not(.active){
+  color: black;
+  text-decoration: none;
+}
+/* dropdown list is "about" */
+.about {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  font-size: 0.8em;
+  display: none;
+  position: absolute;
+  background-color:#62acb2;
+  color: white;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color:rgb(28,53,55); color:white;}
+
+.about:hover .dropdown-content {
+  display: block;
+}
+
+.about:hover .dropdown {
+  background-color: rgb(28,53,55);
+  color: white;
+}
+/*end of dropdown list --*/
+.home, .about, .photogallery, .tipstricks, .newsevents, .contact{
+width: 16.6%;
+height: 100%;
+border: #62acb2 2px;
+float:left;
+font-size: 20px;
+text-align: center;
+padding-top:0.3em;
+}
+.home:hover, .about:hover, .photogallery:hover, .tipstricks:hover, .newsevents:hover, .contact:hover{
+color: white;
+}
+div.tabs{
+position:sticky;
+top:0;
+}
+.title{
+width: 100%;
+height: 8%;
+font-size: 2em;
+margin: auto;
+margin-top: 50px;
+font-family:"monotype corsiva";
+padding: 10px;
+background-color: rgb(28,53,55);
+color: #62acb2;
+}
+.content{
+width: 90%;
+height: 450px;
+margin:auto;
+margin-top:30px;
+}
+.contentSchool{
+  width: 90%;
+  height: 80%;
+  margin:auto;
+  margin-top:30px;
+}
+.photo{
+width: 500px;
+height: 100%;
+float: left;
+margin-left: 5%;
+overflow: hidden;
+}
+.imgRyhuseia{
+  height: 600px;
+}
+.imgRyhuseia .photo{
+  height: 100%;
+}
+.intro{
+  border-right: ridge 2px;
+width: 46%;
+height: 100%;
+float:right;
+padding: 15px 50px 15px 20px;
+font-family:"euphemia";
+text-align: justify;
+margin-right: 5%;
+font-size: 1.2em;
+overflow:hidden;
+
+}
+.readMore, .readMore a{
+  width: 150px;
+  padding: 10px;
+  background-color: lightgray;
+  color: rgb(28,53,55);
+  text-align: center;
+}
+.readMore:hover, .readMore a:hover{
+  color:#62acb2;
+  font-weight: 800;
+}
+
+.footer{
+  padding: 60px;
+  font-family:"euphemia";
+  width:90%;
+  height: 5%;
+  text-align: center;
+  margin: auto;
+}
+/*-------------------------------------------------------------------*/
+/* -- MEDIA  --*/
+@media only screen and (max-width: 1300px) {
+  /*-- droplist MEDIA --*/
+  .dropdown-content {
+    font-size: 0.7em;
+    min-width: 180px;
+  }
+  /*-- TABS MEDIA--*/
+  .tabs{
+    height: 70px;
+    padding-top: 20px;
+  }
+  .home, .about, .photogallery, .tipstricks, .newsevents, .contact{
+  font-size: 15px;
+  padding-top:0em;
+  }
+  /*----SUBTITLE ---*/
+  .title{
+    font-size: 1.5em;
+    height: 50px;
+  }
+/* --- CONTAINER MEDIA----*/
+.content{
+  width: 90%;
+  height: 350px;
+  margin-top:20px;
+  }
+.photo{
+  width: 380px;
+  margin-left:0%;
+  }
+.intro{
+  border-right: ridge 2px;
+  width: 45%;
+  float:left;
+  padding: 15px 30px 15px 20px;
+  margin-left: 5%;
+  font-size: 0.9em;
+  }
+  .readMore, .readMore a{
+    width: 150px;
+    padding: 10px;
+  }
+  .imgRyhuseia{
+    height: 600px;
+  }
+  .imgRyhuseia .photo{
+    height: 100%;
+  }
+  /*----FOOTER MEDIA--*/
+  .footer{
+    padding: 30px;
+  }
+}
+/*--------------------------------------*/
+/*-------- SMALL VIEW ------*/
+@media only screen and (max-width: 1000px) {
+  /*-- droplist MEDIA --*/
+  .dropdown-content {
+    font-size: 0.85em;
+    min-width: 120px;
+  }
+  /*-- TABS MEDIA--*/
+  .tabs{
+    height: 55px;
+  }
+  .home, .about, .photogallery, .tipstricks, .newsevents, .contact{
+  font-size: 10px;
+  }
+  /*----SUBTITLE SMALL ---*/
+  .title{
+    font-size: 1.2em;
+  }
+/* --- CONTAINER MEDIA SMALL----*/
+.content{
+  width: 90%;
+  height: 700px;
+  margin-top:20px;
+  margin-bottom: 50px;
+  }
+.photo{
+  width: 380px;
+  height: 330px;
+  margin-left:0%;
+  }
+.intro{
+  border-right:none;
+  width: 90%;
+  height: auto;
+  float:left;
+  padding: 20px;
+  margin-left: 0%;
+  font-size: 1em;
+  }
+  .imgRyhuseia{
+    height: 500px;
+  }
+  /*----FOOTER SMALL--*/
+  .footer{
+    padding: 30px;
+    font-size: 0.7em;
+  }
+}
+/*--------------------------------------*/
+/*-------- APP VIEW ------*/
+@media only screen and (max-width: 600px) {
+body{
+  padding: 5px;
+}
+.home, .about, .photogallery, .tipstricks, .newsevents, .contact{
+font-size: 0.65em;
+padding:0.1em;
+}
+/* --- CONTAINER MEDIA SMALL----*/
+.content{
+  width: 100%;
+  height: 700px;
+  margin-top:20px;
+  margin-bottom: 50px;
+  }
+.photo{
+  width: 90%;
+  height: 320px;
+  }
+.intro{
+  font-size: 0.9em;
+  height: 300px;
+  overflow: scroll;
+  }
+  .imgRyhuseia{
+    height: 500px;
+  }
+  /*----FOOTER SMALL--*/
+  .footer{
+    padding: 30px;
+    font-size: 10px;
+  }
+}
+.imgRyhuseia{
+  margin-bottom: 500px;
+}
